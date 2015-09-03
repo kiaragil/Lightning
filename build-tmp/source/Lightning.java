@@ -18,11 +18,11 @@ PImage photo;
 public void setup()
 { 
   size(600,600);
-  strokeWeight(1);
+  strokeWeight(4);
 
 }
 
-int startX = 150;
+int startX = (int)(Math.random()* mouseX+100);
 int startY = 0;
 int endX = 150;
 int endY = 0;
@@ -31,7 +31,7 @@ public void draw()
 {
 	hammer();
   	stroke(235, 235, 235);
-  	while (endY<590){
+  	while (endY < 570){
     	endX = startX + (int)(Math.random()* 18-9);
     	endY = startY + (int)(Math.random()* 25);
     	line(startX,startY,endX,endY);
@@ -42,7 +42,7 @@ public void draw()
 }
 public void mousePressed()
 {
-	startX = (int)(Math.random()* 590);
+	startX = (int)(Math.random()* mouseX+100);
 	startY = 0;
 	endX = 150;
 	endY = 0;
