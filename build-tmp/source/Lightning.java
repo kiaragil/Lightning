@@ -22,7 +22,7 @@ public void setup()
 
 }
 
-int startX = (int)(Math.random()* mouseX+100);
+int startX = mouseX+100;
 int startY = 0;
 int endX = 150;
 int endY = 0;
