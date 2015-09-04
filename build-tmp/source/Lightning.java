@@ -34,7 +34,8 @@ public void draw()
   	while (endY < 570){
     	endX = startX + (int)(Math.random()* 18-9);
     	endY = startY + (int)(Math.random()* 25);
-    	line(startX,startY,endX,endY);
+    	line(startX-100,startY,endX-100,endY);
+    	line(startX+100,startY,endX+100,endY);
     	startX = endX;
     	startY = endY;
   }
