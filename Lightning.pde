@@ -21,7 +21,7 @@ void draw()
     	endX = startX + (int)(Math.random()* 50-25);
     	endY = startY - (int)(Math.random()* 50);
     	
-    	line(startX-20,startY-20,endX-20,endY-20);
+    	line(mouseX+15, mouseY+15,endX-20,endY-20);
     	line(startX,startY,endX, endY);
     	startX = endX;
     	startY = endY;
