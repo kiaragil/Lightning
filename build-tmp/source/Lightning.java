@@ -19,6 +19,7 @@ public void setup()
 { 
   size(600,600);
   strokeWeight(4);
+  photo = loadImage("thorhammer2.gif");
 
 }
 
@@ -29,7 +30,8 @@ int endY = 0;
 
 public void draw()
 {
-	hammer();
+	background(0,0,0);
+	image(photo, mouseX, mouseY);
   	stroke(235, 235, 235);
   	while (endY < 570){
     	endX = startX + (int)(Math.random()* 18-9);
@@ -38,6 +40,7 @@ public void draw()
     	line(startX+100,startY,endX+100,endY);
     	startX = endX;
     	startY = endY;
+
   }
 
 }
@@ -52,9 +55,8 @@ public void mousePressed()
 
 
 public void hammer(){
-	  background(0,0,0);
-	  photo = loadImage("thorhammer2.gif");
-	  image(photo, mouseX, mouseY);
+	  	  
+	  
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Lightning" };
