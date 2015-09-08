@@ -18,26 +18,27 @@ PImage photo;
 public void setup()
 { 
   size(600,600);
-  strokeWeight(4);
+  strokeWeight(3);
   photo = loadImage("thorhammer2.gif");
 
 }
 
-int startX = mouseX+100;
-int startY = 0;
-int endX = 150;
-int endY = 0;
+int startX = mouseX+15;
+int startY = mouseY-95;
+int endX = 0;
+int endY = 1;
 
 public void draw()
 {
 	background(0,0,0);
-	image(photo, mouseX, mouseY);
-  	stroke(235, 235, 235);
-  	while (endY < 570){
-    	endX = startX + (int)(Math.random()* 18-9);
-    	endY = startY + (int)(Math.random()* 25);
-    	line(startX-100,startY,endX-100,endY);
-    	line(startX+100,startY,endX+100,endY);
+	image(photo, mouseX-30, mouseY-100);
+  	stroke(147, 202, 219);
+  	while (endY > 0){
+    	endX = startX + (int)(Math.random()* 50-25);
+    	endY = startY - (int)(Math.random()* 50);
+    	
+    	line(startX-20,startY-20,endX-20,endY-20);
+    	line(startX,startY,endX, endY);
     	startX = endX;
     	startY = endY;
 
@@ -46,10 +47,10 @@ public void draw()
 }
 public void mousePressed()
 {
-	startX = (int)(Math.random()* mouseX+100);
-	startY = 0;
-	endX = 150;
-	endY = 0;
+	startX = mouseX+15;
+	startY = mouseY-95;
+	endX = 0;
+	endY = 1;
 }
 
 
